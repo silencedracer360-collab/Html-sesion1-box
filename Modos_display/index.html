@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .elemento{
+            display: inline;
+            background-color: #000;
+            color: white;
+            width: 200px;
+            height: 200px;
+        }
+        .elemento_block{
+            display: block;
+            background-color: #023;
+            color: rgb(228, 62, 62);
+            width: 200px;
+            height: 200px;
+        }
+        .resaltado{
+            color: aqua;
+            letter-spacing: 2px; /*Para aumentar la distancia entre letras*/
+            font-family: Arial;
+            font-size: larger;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inline:</h1>
+    <div class="elemento">
+        Productos
+    </div>
+    <div class="elemento resaltado">
+        Nosotros
+    </div>
+    <div class="elemento">
+        Servicios
+    </div>
+    <div class="elemento resaltado">
+        Contacto
+    </div>
+    <hr>
+
+    <h1>Block:</h1>
+    <div class="elemento_block">
+        Productos
+    </div>
+    <div class="elemento_block">
+        Nosotros
+    </div>
+    <div class="elemento_block">
+        Servicios
+    </div>
+    <div class="elemento_block">
+        Contacto
+    </div>
+</body>
+</html>
