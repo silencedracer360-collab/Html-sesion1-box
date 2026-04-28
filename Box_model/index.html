@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
         .padre{
             width: 500px;
-            height: 400px;
+            height: auto;
             background-color: blueviolet;
             display: block;
+            margin: 0px auto 40px auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
         .hijo{
+            margin: 20px auto 20px auto;
+            padding: 50px 50px;
             width: 200px;
             height: 200px;
             background-color: red;
             display: block;
-            padding: 20px 30px 5px 10px;
             border-top-style: double;
             border-top-width: 5px;
             border-top-color: yellow; /*Es el espacio que hay entre el borde de una caja y su contenido*/
@@ -32,13 +40,25 @@
              border-bottom-style: solid;
             border-bottom-width: 1px;
             border-bottom-color: blue;
+            /*Short hand para Border*/
+            /*border-radius: 15px 30px 10px 20px;*/
+            -webkit-box-shadow: 14px 16px 25px 9px #000000; 
+            box-shadow: 14px 16px 25px 9px #000000;
+            border-radius: 50%;
+        }
+        .hijo2{
+            margin-top: -100px;
         }
     </style>
 </head>
 <body>
     <div class="padre">
         <div class="hijo">
-            Hijo
+            Hijo 1
+        </div>
+        <div class="hijo hijo2
+        ">
+            Hijo 2
         </div>
     </div>
 </body>
