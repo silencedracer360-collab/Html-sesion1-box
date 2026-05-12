@@ -5,44 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
     <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter/Inter.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter/Inter.ttf') format('truetype');
+            font-weight: 700;
+            font-style: bold;
+            font-display: swap;
+        }
+        /*Estilos de reseteo*/
         *{
             margin: 0;
             padding: 0;
         }
         body{
             background-color: #DEDFE1;
+            font-family: 'Inter', sans-serif;
         }
-        .main{
+        /*BEM: Block__Element Modifier*/
+        .cardMain{
+            display: block;
             background-color: white;
             width: 500px;
-            height: 200px;
+            height: auto;
             margin: 50px auto;
-
+            border-radius: 15px;
+            box-shadow: 4px 4px 10px 0px rgba(36,34,34,0.75);
         }
-        .company-name{
+        .card__companyname{
+            background-color: #3E3E40;
             width: auto;
             height: 100px;
-            background-color: #3E3E40;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
             color: white;
+            font-size: 30px;
+            font-weight: bold;
+            padding-top: 30px;
+            text-align: center;
         }
-        .flag{
-            width: auto;
-            height: 50px;
+        .card__flag{
             background-color: #76C4C1;
+            height: 50px;
+            width: auto;
         }
-        .portrait{
-            width: 500px;
-            height: 600px;
+        .card__img{
+            /*Las img son inline por defecto*/
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0px auto;
+            margin-top: -100px;
+            border:white solid 8px;
+            border-radius: 50%;
+        }
+        .card__name{
+            display:block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 30px;
+            letter-spacing: 2px;
+        }
+        .card__name--apellido{
+            font-weight: bold;
+        }
+
+        .card__carrer{
+            display:block;
+            text-align: center;
+            color: #76C4C1;
+            font-size: 18px;
+            letter-spacing: 3px;
+        }
+        .card__data{
+            margin: 40px auto;
+        }
+        .card__data--row{
+            padding-inline: 20px;
+        }
+        .card__data--word{
+            color: #76C4C1;
+            font-weight: bold;
+        }
+        .card__data--space{
+            margin: 5 auto;
         }
     </style>
 </head>
 <body>
-    <div class="main">
-        <div class="company-name"></div>
-        <div class="flag"></div>
-        <div>
-            <img src="retrato.jpg" alt="" class="portrait">
+    <div class="cardMain">
+        <!--Div Empresa-->
+        <div class="card__companyname">SENA CGMLTI</div>
+        <!--Div Flag: Turquesa-->
+        <div class="card__flag"></div>
+        <!--Div Imagen-->
+        <img src="retrato.jpg" alt="" class="card__img">
+        <div class="card__name"> Michael <span class="card__name--apellido">Jackson</span> </div>
+        <div class="card__carrer">
+            Singer and Composer
         </div>
+            <table class="card__data">
+                <tr>
+                    <td class="card__data--row card__data--word">ID</td>
+                    <td class="card__data--row">: 9876543210</td>
+                </tr>
+                <tr>
+                    <td class="card__data--row card__data--word">BOB</td>
+                    <td class="card__data--row">: 00-00-00</td>
+                </tr>
+                <tr>
+                    <td class="card__data--row card__data--word">Phone</td>
+                    <td class="card__data--row">: (+57) 3224859612</td>
+                </tr>
+                <tr>
+                    <td class="card__data--row card__data--word">E-mail</td>
+                    <td class="card__data--row">: Example@any.com</td>
+                </tr>
+                <tr>
+                    <td class="card__data--row card__data--word">Join</td>
+                    <td class="card__data--row">: 12-09-2018</td>
+                </tr>
+                <tr>
+                    <td class="card__data--row card__data--word">Expire</td>
+                    <td class="card__data--row">: 15-09-2023</td>
+                </tr>
+            </table>
     </div>
 </body>
 </html>
