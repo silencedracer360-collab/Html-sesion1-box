@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <style>
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter/Inter.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Inter';
+            src: url('inter/Inter.ttf') format('truetype');
+            font-weight: 700;
+            font-style: bold;
+            font-display: swap;
+        }
+        /*Estilos de reseteo*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #DEDFE1;
+            font-family: 'Inter', sans-serif;
+        }
+        /*BEM: Block__Element Modifier*/
+        .cardMain{
+            display: block;
+            width: 500px;
+            height: auto;
+            margin: 50px auto;
+            border-radius: 20px;
+            box-shadow: 4px 4px 10px 0px rgba(36,34,34,0.75);
+        }
+        .card__companyname{
+            background-color: #12bef3;
+            width: auto;
+            height: 200px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            padding-top: 30px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        .card__flag{
+            background-color: #DEDFE1;
+            height: 250px;
+            width: auto;
+            border-radius: 20px;
+        }
+        .card__img{
+            /*Las img son inline por defecto*/
+            display: block;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0px auto;
+            border:white solid 8px;
+            border-radius: 50%;
+        }
+        .card__name{
+            display:block;
+            text-align: center;
+            padding-top: 20px;
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+        .card__info{
+            display: block;
+            font-size: 15px;
+            padding-top: 20px;
+        }
+        .card__button{
+            display: block;
+            background-color: #12bef3;
+            margin: 20px auto;
+            border-radius: 6px 6px;
+            width: 150px;
+            height: 50px;
+            font-size: 18px;
+            text-align: center;
+            font-style: bold;
+            color: white;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cardMain">
+        <!--Div Empresa-->
+        <div class="card__companyname"><img src="retrato.jpg" alt="" class="card__img"></div>
+        <!--Div Flag: Turquesa-->
+        <div class="card__flag">
+            <div class="card__name">
+                Michael Jackson
+                <div class="card__info">
+                    Michael Joseph Jackson <br>​ 
+                    fue un cantante, compositor,<br> 
+                    productor y bailarín estadounidense.​​​
+                </div>
+                <div class="card__button">
+                    View More
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
